@@ -1,0 +1,73 @@
+/* Basic Styles */
+.section {
+    padding: 60px 0;
+}
+
+.section-heading h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.event_filter {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.event_filter li {
+    margin: 0 10px;
+}
+
+.event_filter li a {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.event_filter li a:hover,
+.event_filter li a.is_active {
+    background-color: #007bff;
+}
+
+/* Grid Styles for Categories */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.category-item {
+    text-align: center;
+    padding: 20px;
+    height: 94%;
+
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.category-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.category-item h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}

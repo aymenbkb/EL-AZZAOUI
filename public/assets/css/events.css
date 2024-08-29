@@ -1,0 +1,134 @@
+.main-banner-events {
+    text-align: center;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; /* Necessary for positioning the overlay and content */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Center text inside the content */
+}
+  
+.main-banner-events img {
+ 
+    border-radius: 0 0 200px 0;
+    display: block; /* Removes any space below the image */
+    width: 100%; /* Ensure the image takes the full width of the parent */
+    height: auto; /* Maintain aspect ratio */
+}
+  
+.main-banner-events::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; /* Added to ensure full width */
+    bottom: 0; /* Added to ensure full height */
+    background-color: rgba(0, 0, 0, 0.707); /* Black overlay with 50% opacity */
+    border-radius: 0 0 200px 0; /* Match the border radius of the image */
+    pointer-events: none; /* Ensures the overlay doesn’t interfere with clicks */
+}
+  
+.banner-content-events {
+    display: flex; /* Use flexbox to center content */
+    flex-direction: column; /* Stack title and text vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    position: absolute; /* Positions content on top of the image */
+    color: white; /* Makes text white for better contrast */
+    z-index: 1; /* Ensures text appears above the overlay */
+    top: 50%; /* Start from the center vertically */
+    left: 50%; /* Start from the center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center perfectly */
+    text-align: center; /* Center the text inside the content */
+    padding-bottom: 20px; /* Adjust padding if needed */
+}
+  
+.banner-content-events h1 {
+    color: #fff;
+    margin: 0; /* Remove default margin */
+    font-size: 4.5rem; /* Adjust the font size as needed */
+}
+  
+.banner-content-events p {
+    width: 100%;
+    color: #fff;
+    margin-top: 10px; /* Space between the title and text */
+    font-size: 1.05rem; /* Adjust the font size as needed */
+}
+.fa .fa-angle-right{
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: var(--fa-display, inline-block);
+    font-style: normal;
+    font-variant: normal;
+
+    text-rendering: auto;
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For screens up to 1200px wide (laptops and smaller desktops) */
+@media (max-width: 1200px) {
+    .banner-content-events h1 {
+        font-size: 3.5rem;
+    }
+    .banner-content-events p {
+        font-size: 1rem;
+    }
+}
+
+/* For screens up to 992px wide (tablets in landscape mode) */
+@media (max-width: 992px) {
+    .banner-content-events h1 {
+        font-size: 3rem;
+    }
+    .banner-content-events p {
+        font-size: 0.95rem;
+    }
+    .main-banner-events img {
+        border-radius: 0; /* Remove the border radius for smaller screens */
+    }
+}
+
+/* For screens up to 768px wide (tablets in portrait mode) */
+@media (max-width: 768px) {
+    .banner-content-events h1 {
+        font-size: 2.5rem;
+    }
+    .banner-content-events p {
+        font-size: 0.9rem;
+    }
+    .main-banner-events img {
+        border-radius: 0; /* Remove the border radius for smaller screens */
+    }
+}
+
+/* For screens up to 576px wide (phones in landscape mode) */
+@media (max-width: 576px) {
+    .banner-content-events h1 {
+        font-size: 2rem;
+    }
+    .banner-content-events p {
+        font-size: 0.85rem;
+    }
+    .main-banner-events img {
+        border-radius: 0; /* Remove the border radius for smaller screens */
+    }
+}
+
+/* For screens up to 480px wide (phones in portrait mode) */
+@media (max-width: 480px) {
+    .banner-content-events h1 {
+        font-size: 1.75rem;
+    }
+    .banner-content-events p {
+        font-size: 0.8rem;
+    }
+    .main-banner-events img {
+        margin-top: 0; /* Adjust margin for smaller screens */
+        border-radius: 0; /* Remove the border radius for smaller screens */
+    }
+}
