@@ -1,140 +1,135 @@
-.container-services {
-    position: relative; /* Required for absolute positioning of image */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 20px;
-  }
-  
-  /* Service Item Styling */
+.service-item-services {
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 1200px;
+  margin: 40px auto; /* Adds margin-top and margin-bottom */
+  position: relative; /* Required for ::before positioning */
+}
+
+.service-item-services:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Background Circle */
+.service-item-services::before {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 255, 0, 0.2); /* Light green color */
+  border-radius: 50%;
+  top: 50%;
+  left: -50px;
+  z-index: 0;
+}
+
+/* Image Container Styling */
+.service-item-services .image-container-services {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  overflow: hidden;
+}
+
+.service-item-services .image-container-services img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom-right-radius: 50%; /* Rounded bottom right corner */
+}
+
+/* Content Styling */
+.service-item-services .content {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.service-item-services h4 {
+  font-size: 2rem; /* Base size for larger screens */
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.service-item-services p {
+  font-size: 1rem; /* Base size for larger screens */
+  line-height: 1.6;
+  color: #555;
+}
+
+.service-item-services ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.service-item-services li {
+  font-size: 1rem; /* Base size for larger screens */
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .service-item-services {
-    position: relative; /* Position relative to contain absolutely positioned elements */
-    background: #fff;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
+    flex-direction: column;
+    margin: 30px auto;
   }
-  
-  .service-item-services:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+
+  .service-item-services::before {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: -50px;
   }
-  
-  /* Image Styling */
+
   .service-item-services .image-container-services {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 800px;
-    overflow: hidden;
-    z-index: 1; /* Ensure image is behind the content */
+    border-bottom-right-radius: 15px; /* Adjusted for column layout */
+    border-top-left-radius: 15px;
   }
-  
-  .service-item-services .image-container-services img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 65%;
-    object-fit: cover;
-    z-index: 2; /* Ensure image is above the rectangle */
-  }
-  
-  .service-item-services .rectangle-bg {
-    position: absolute;
-    top: 20px; /* Adjust to position the rectangle */
-    left: 20px; /* Adjust to position the rectangle */
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent rectangle */
-    border-radius: 15px;
-    z-index: 0; /* Place rectangle behind the image */
-  }
-  
-  /* Content Styling */
+
   .service-item-services .content {
-    position: relative; /* Position relative to ensure proper stacking */
-    flex: 1;
-    padding: 60px;
-    margin-left: 50%; /* Adjust to prevent overlap with the image */
+    padding: 20px;
+    text-align: center;
   }
-  
+
   .service-item-services h4 {
-    font-size: 28px;
-    margin: 0 0 15px;
-    color: #333;
+    font-size: 1.5rem; /* Adjust size for tablets */
   }
-  
-  .service-item-services p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-  }
-  
-  .service-item-services ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-  }
-  
+
+  .service-item-services p,
   .service-item-services li {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #555;
+    font-size: 0.9rem; /* Adjust size for tablets */
   }
-  
-  .point-icon {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-color: #007bff;
-    border-radius: 50%;
-    margin-right: 8px;
+}
+
+@media (max-width: 480px) {
+  .service-item-services {
+    padding: 10px;
+    margin: 20px auto;
   }
-  
-  .service-item-services .main-button {
-    margin-left: 40%;
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 25px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+
+  .service-item-services .content {
+    padding: 15px;
   }
-  
-  .service-item-services .main-button:hover {
-    background-color: #0056b3;
+
+  .service-item-services h4 {
+    font-size: 1.25rem; /* Adjust size for small screens */
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .service-item-services {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .service-item-services .image-container {
-      position: static;
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-  
-    .service-item-services .rectangle-bg {
-      position: static;
-      width: 100%;
-      height: auto;
-    }
-  
-    .service-item-services .content {
-      margin-left: 0;
-    }
+
+  .service-item-services p,
+  .service-item-services li {
+    font-size: 0.8rem; /* Adjust size for small screens */
   }
+}

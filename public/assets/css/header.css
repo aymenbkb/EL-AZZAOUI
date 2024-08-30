@@ -13,7 +13,19 @@
     -o-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
   }
+
+  .logo {
+    display: block;  /* Permet de centrer l'image si le parent est centré */
+    margin: 0 auto;  /* Centre horizontalement */
+    width: 60%;  /* Définit la largeur du logo à 60% */
+  }
   
+  .logo img {
+    width: 70%;  /* Assure que l'image prend toute la largeur de son conteneur .logo */
+    height: auto;  /* Garde les proportions de l'image */
+    display: block;  /* Évite les espaces blancs en dessous de l'image */
+    margin-top: -28%;
+  }
   
   .header-area .main-nav {
     background: transparent;
@@ -67,7 +79,7 @@
     position: absolute;
     color: #fff;
     right: 20px;
-    top: 15px;
+    top: 10px;
     font-size: 16px;
   }
   
@@ -142,7 +154,7 @@
   .header-area .main-nav .menu-trigger {
     cursor: pointer;
     position: absolute;
-    top: 33px;
+    top: 25px;
     width: 32px;
     height: 40px;
     text-indent: -9999em;
@@ -151,3 +163,30 @@
     display: none;
   }
   
+
+  /* Media query for small devices (portrait phones, less than 576px) */
+@media only screen and (max-width: 575.98px) {
+  /* CSS rules here */
+
+  .logo img {
+    width: 60%;  
+  }
+}
+
+/* Media query for medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+  /* CSS rules here */
+  .logo img {
+    width: 60%;  
+  }
+}
+
+/* Media query for large devices (desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
+  /* CSS rules here */
+}
+
+/* Media query for extra large devices (large desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) {
+  /* CSS rules here */
+}

@@ -18,13 +18,12 @@
 </div>
 <section class="section courses" id="courses">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="section-heading">
-                    <h2>Best categories</h2>
-                </div>
+        <div class="col-lg-12 text-center" style="    margin-top: -193px;">
+            <div class="section-heading">
+              <h6>Schedule</h6>
+              <h2>Courses</h2>
             </div>
-        </div>
+          </div>
         {{-- <ul class="event_filter">
             <li>
                 <a class="is_active" href="#!" data-filter="*">Show All</a>

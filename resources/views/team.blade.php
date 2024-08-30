@@ -15,8 +15,16 @@
     </div>
   </div>
 </div>
+<div class="col-lg-12 text-center" style="MARGIN-TOP: 20PX;">
+  <div class="section-heading">
+    <h6>Schedule</h6>
+    <h2>Team</h2>
+  </div>
+</div>
 <div class="team section" id="team">
+  
     <div class="container">
+     
       <div class="row">
         
         <div class="col-lg-3 col-md-6">

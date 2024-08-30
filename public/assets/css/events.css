@@ -57,16 +57,6 @@
     margin-top: 10px; /* Space between the title and text */
     font-size: 1.05rem; /* Adjust the font size as needed */
 }
-.fa .fa-angle-right{
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    display: var(--fa-display, inline-block);
-    font-style: normal;
-    font-variant: normal;
-
-    text-rendering: auto;
-}
-
 
 /* Media Queries for Responsiveness */
 
@@ -108,6 +98,7 @@
 
 /* For screens up to 576px wide (phones in landscape mode) */
 @media (max-width: 576px) {
+
     .banner-content-events h1 {
         font-size: 2rem;
     }
@@ -115,7 +106,12 @@
         font-size: 0.85rem;
     }
     .main-banner-events img {
-        border-radius: 0; /* Remove the border radius for smaller screens */
+        height: 320px;
+        border-radius: 0 0 50px 0; /* Remove the border radius for smaller screens */
+    }
+    .main-banner-events::after{
+        height: 320px;
+        border-radius: 0 0 50px 0; /* Remove the border radius for smaller screens */
     }
 }
 
@@ -128,7 +124,11 @@
         font-size: 0.8rem;
     }
     .main-banner-events img {
-        margin-top: 0; /* Adjust margin for smaller screens */
-        border-radius: 0; /* Remove the border radius for smaller screens */
+        height: 320px;
+        border-radius: 0 0 50px 0; /* Remove the border radius for smaller screens */
+    }
+    .main-banner-events::after{
+        height: 320px;
+        border-radius: 0 0 50px 0; /* Remove the border radius for smaller screens */
     }
 }

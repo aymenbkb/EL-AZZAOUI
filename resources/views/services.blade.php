@@ -18,17 +18,17 @@
     </div>
 <div class="services section" id="services">
     <div class="container-services">
+          <div class="col-lg-12 text-center" style="MARGIN-TOP: 20PX;">
+          <div class="section-heading">
+            <h6>Schedule</h6>
+            <h2>Service</h2>
+          </div>
+        </div>
       <div class="service-item-services">
         <div class="image-container-services">
           <div class="rectangle-bg"></div>
           <img src="{{ asset('assets/images/service-01.jpeg') }}" alt="Online Degrees">
         </div>
-        {{-- <div class="col-lg-12 text-center" style="MARGIN-TOP: 20PX;">
-          <div class="section-heading">
-            <h6>Schedule</h6>
-            <h2>Upcoming Events</h2>
-          </div>
-        </div> --}}
         <div class="content">
           <h4>Online Degrees</h4>
           <p>Unlock your potential with our flexible online degree programs. Designed for busy professionals and students alike, our accredited degrees offer you the opportunity to advance your education without compromising your current responsibilities.</p>

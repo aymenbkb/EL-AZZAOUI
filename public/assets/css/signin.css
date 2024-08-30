@@ -1,10 +1,5 @@
 
 .container-form {
-    position: absolute; /* Change to absolute to center it within the viewport */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset by 50% of the element's width and height */
-    max-width: 850px;
     margin-top: 4%;
     width: 100%;
     background: #fff;
