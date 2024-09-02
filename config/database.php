@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'null'),
 
     /*
     |--------------------------------------------------------------------------
@@ -30,7 +30,13 @@ return [
     */
 
     'connections' => [
-
+    // Add this null connection type
+        'null' => [
+            'driver' => 'sqlite',  // Use 'sqlite' with an in-memory database for 'null' connection type
+            'database' => ':memory:',
+            'prefix' => '',
+        ],
+    
         'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),

@@ -1,192 +1,232 @@
+/* General Styles for the Header */
 .header-area {
-    background-color: #004777 !important;
-    border-radius: 0px 0px 25px 25px;
-    height: 80px!important;
-    position: fixed!important;
-    top: 0!important;
-    left: 0;
-    right: 0;
-    padding: 15px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
-    -webkit-transition: all .5s ease 0s;
-    -moz-transition: all .5s ease 0s;
-    -o-transition: all .5s ease 0s;
-    transition: all .5s ease 0s;
-  }
+  background-color: #004777;
+  border-radius: 0px 0px 25px 25px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  display: flex; /* Use flexbox for centering items */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space between logo and nav items */
+  transition: all 0.5s ease;
+  z-index: 100;
+}
 
-  .logo {
-    display: block;  /* Permet de centrer l'image si le parent est centré */
-    margin: 0 auto;  /* Centre horizontalement */
-    width: 60%;  /* Définit la largeur du logo à 60% */
-  }
-  
-  .logo img {
-    width: 70%;  /* Assure que l'image prend toute la largeur de son conteneur .logo */
-    height: auto;  /* Garde les proportions de l'image */
-    display: block;  /* Évite les espaces blancs en dessous de l'image */
-    margin-top: -28%;
-  }
-  
+/* Logo Container Styles */
+.logo {
+  margin: 0 auto; /* Center the logo horizontally */
+  height: auto; /* Let the height scale proportionally */
+}
+
+.logo img {
+  display: block; /* Prevent whitespace below the image */
+  width: 180px; /* Set default width */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0; /* Center the logo */
+}
+
+/* Navigation and Search Box Styles */
+.header-area .main-nav {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-area .main-nav #search {
+  position: relative;
+  width: 250px; /* Default width for search box */
+}
+
+.header-area .main-nav #search input {
+  background-color: rgb(255 255 255 / 48%);
+  height: 36px;
+  width: 100%;
+  border-radius: 18px 0px 18px 18px;
+  border: none;
+  color: #004777;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 0px 20px;
+}
+
+.header-area .main-nav #search input::placeholder {
+  color: rgba(250, 250, 250, 0.75);
+}
+
+/* Menu Trigger Button for Small Screens */
+.header-area .main-nav .menu-trigger {
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  display: none;
+}
+
+/* Popup Menu Styles */
+.popup-menu {
+  display: none; /* Hide by default */
+  position: fixed;
+  top: 0;
+  left: -250px; /* Position off-screen to start */
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent background */
+  color: #fff;
+  transition: left 0.3s ease-in-out;
+  z-index: 200;
+}
+
+.popup-menu.active {
+  left: 0; /* Slide in from the left */
+}
+
+.popup-menu ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.popup-menu ul li a {
+  color: #ddd; /* Darker text color */
+  padding: 10px 0;
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.popup-menu ul li a:hover {
+  color: #fff; /* Lighter color on hover */
+}
+/* Container that wraps search and navigation */
+.nav-and-search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: row-reverse;
+}
+
+/* Search Button Styles */
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.search-btn {
+  right: 0px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.search-input-container {
+  position: absolute;
+  top: 50px;
+  right: -40px;
+  display: none;
+  width: 300px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(-20px);
+  opacity: 0;
+  z-index: 1000;
+}
+
+.search-input-container.active {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.search-input-container input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Responsive Styles for Smaller Devices */
+
+/* Small Devices (Phones, 576px and Up) */
+@media screen and (max-width: 428px) {
   .header-area .main-nav {
-    background: transparent;
-    display: flex
+    justify-content: space-between; /* Adjust alignment */
   }
-  
-  .header-area .main-nav .logo {
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    display: inline-block;
+
+  .search-input-container {
+    top: 70px; /* Adjust based on header height */
   }
-  
-  .header-area .main-nav .logo h1 {
-    font-size: 36px;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 600;
-    margin-right: 20px;
-    padding-right: 20px;
-    border-right: 1px solid rgba(250, 250, 250, 0.3);
+
+  .popup-menu {
+    width: 100%; /* Full width on small screens */
   }
-  
-  .background-header .main-nav .logo,
-  .background-header .main-nav #search {
-    margin-top: 18px;
-  }
-  
-  .header-area .main-nav #search {
-    position: relative;
-  }
-  
-  .header-area .main-nav #search input {
-    background-color: rgba(255, 255, 255, 0.10);
-    height: 44px;
-    width: 250px;
-    border-radius: 23px;
-    border: none;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 0px 20px 0px;
-  }
-  
-  .header-area .main-nav #search input::placeholder {
-    color: rgba(250, 250, 250, 0.75);
-  }
-  
-  .header-area .main-nav #search i {
-    position: absolute;
-    color: #fff;
-    right: 20px;
-    top: 10px;
-    font-size: 16px;
-  }
-  
-  .header-area .main-nav ul.nav {
-    border-radius: 0px 0px 25px 25px;
-    flex-basis: 180%;
-    margin-right: 0px;
-    justify-content: right;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    position: relative;
-    z-index: 999;
-  }
-  
-  .header-area .main-nav .nav li:last-child {
-    padding-right: 0px;
-  }
-  
-  .header-area .main-nav .nav li {
-    padding-left: 5px;
-    padding-right: 5px;
-    height: 40px;
-    line-height: 40px;
-  }
-  
-  .header-area .main-nav .nav li a {
-    display: block;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 20px;
-    font-weight: 300;
-    font-size: 14px;
-    height: 40px;
-    line-height: 40px;
-    text-transform: capitalize;
-    color: #fff;
-    -webkit-transition: all 0.4s ease 0s;
-    -moz-transition: all 0.4s ease 0s;
-    -o-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
-    border: transparent;
-    letter-spacing: .25px;
-  }
-  
-  .background-header .main-nav .nav {margin-top: 20px;}
-  
-  .background-header .main-nav .nav li {
-    height: 80px;
-    line-height: 80px;
-  }
-  
-  .header-area .main-nav .nav li:hover a {
-    opacity: 0.8;
-  }
-  .header-area .main-nav .nav li a.active {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.10);
-    opacity: 1;
-  }
-  
-  .background-header .main-nav .nav li:hover a {
-    opacity: 0.8;
-  }
-  .background-header .main-nav .nav li a.active {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.10);
-    opacity: 1;
-  }
-  
+
   .header-area .main-nav .menu-trigger {
-    cursor: pointer;
-    position: absolute;
-    top: 25px;
-    width: 32px;
-    height: 40px;
-    text-indent: -9999em;
-    z-index: 99;
-    right: 20px;
-    display: none;
+    display: block; /* Show menu trigger button */
   }
-  
-
-  /* Media query for small devices (portrait phones, less than 576px) */
-@media only screen and (max-width: 575.98px) {
-  /* CSS rules here */
 
   .logo img {
-    width: 60%;  
+    width: 120px; /* Smaller width for mobile devices */
+  }
+
+  .header-area .main-nav #search {
+    width: 180px; /* Smaller search box for mobile devices */
   }
 }
 
-/* Media query for medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 576px) {
+  .header-area .main-nav {
+    justify-content: space-between; /* Adjust alignment */
+  }
+
+  .search-input-container {
+    top: 70px; /* Adjust based on header height */
+  }
+
+  .logo img {
+    width: 150px; /* Smaller width for mobile devices */
+  }
+
+  .header-area .main-nav #search {
+    width: 180px; /* Smaller search box for mobile devices */
+  }
+}
+
+/* Medium Devices (Tablets, 768px and Up) */
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
-  /* CSS rules here */
   .logo img {
-    width: 60%;  
+    width: 150px; /* Moderate width for smaller tablets */
+  }
+
+  .header-area .main-nav #search {
+    width: 200px; /* Adjusted width for tablets */
   }
 }
 
-/* Media query for large devices (desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) and (max-width: 1399.98px) {
-  /* CSS rules here */
+/* Large Devices (Desktops, 1200px and Up) */
+@media only screen and (min-width: 1200px) {
+  .logo img {
+    width: 220px; /* Larger width for large desktops */
+  }
 }
 
-/* Media query for extra large devices (large desktops, 1400px and up) */
+/* Extra Large Devices (Large Desktops, 1400px and Up) */
 @media only screen and (min-width: 1400px) {
-  /* CSS rules here */
+  .logo img {
+    width: 250px; /* Maximum size for extra large desktops */
+  }
+}
+@media (min-width: 1400px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+      max-width: 100%;
+  }
 }

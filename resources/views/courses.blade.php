@@ -12,7 +12,7 @@
     <!-- Title and text content -->
     <div class="banner-content-events">
       <h1>courses</h1>
-  <p>El AZZAOUI SCHOOL offers a diverse range of courses designed to empower students at every level. Whether you're looking to excel academically, develop personal skills, or pursue a passion, our curriculum is crafted to meet your needs. Each course is taught by experienced educators who are committed to delivering dynamic instruction in a supportive environment. From foundational subjects to advanced topics, our courses are structured to inspire a lifelong love of learning, equipping students with the knowledge and skills they need to succeed.</p>
+  <p>El AZZAOUI SCHOOL offers diverse courses led by experienced educators, aiming to boost academic success, personal growth, and passion pursuits in a supportive environment.</p>
     </div>
   </div>
 </div>

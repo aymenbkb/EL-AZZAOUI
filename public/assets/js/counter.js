@@ -104,3 +104,22 @@
     }
   });
   
+
+
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    var searchBtn = document.getElementById('searchBtn');
+    var searchInputContainer = document.getElementById('searchInputContainer');
+
+    searchBtn.addEventListener('click', function () {
+      // Toggle active class to show/hide the search input
+      searchInputContainer.classList.toggle('active');
+    });
+
+    // Optionally, close the search input when clicking outside
+    document.addEventListener('click', function (event) {
+      if (!searchBtn.contains(event.target) && !searchInputContainer.contains(event.target)) {
+        searchInputContainer.classList.remove('active');
+      }
+    });
+  });

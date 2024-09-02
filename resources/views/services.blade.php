@@ -90,7 +90,13 @@
           <a href="#" class="main-button">Learn More</a>
         </div>
       </div>
-  
+      <div class="container-services">
+        <div class="col-lg-12 text-center" style="MARGIN-TOP: 20PX;">
+        <div class="section-heading">
+          <h2>what are you waiting for?</h2>
+          <a class="joinnow" href="/courses">Join Now</h6>
+        </div>
+      </div>
       <!-- Add more service-items here if needed -->
   
     </div>

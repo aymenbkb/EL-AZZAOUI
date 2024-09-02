@@ -7,8 +7,20 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 1200px;
-  margin: 40px auto; /* Adds margin-top and margin-bottom */
+  margin: 80px auto; /* Adds margin-top and margin-bottom */
   position: relative; /* Required for ::before positioning */
+}
+.service-item-services .joinnow{
+  color: #004777;
+}
+.service-item-services .content .main-button{
+  color: white;
+  width: fit-content;
+  background: #004777;
+  height: fit-content;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
 }
 
 .service-item-services:hover {
@@ -16,18 +28,32 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-/* Background Circle */
+/* First Circle */
 .service-item-services::before {
   content: '';
   position: absolute;
   width: 300px;
   height: 300px;
-  background-color: rgba(0, 255, 0, 0.2); /* Light green color */
+  background-color: #4df6d7e7; /* Light green color */
   border-radius: 50%;
-  top: 50%;
-  left: -50px;
+  top: 80%;
+  right: -60px;
   z-index: 0;
 }
+
+/* Second Circle */
+.service-item-services::after {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #6ba6ffa4; /* Light red color */
+  border-radius: 50%;
+  top: 60%;
+  right: -2%;
+  z-index: 0;
+}
+
 
 /* Image Container Styling */
 .service-item-services .image-container-services {
@@ -44,10 +70,13 @@
   height: 100%;
   object-fit: cover;
   border-bottom-right-radius: 50%; /* Rounded bottom right corner */
+  box-shadow: 0 35px 1px rgba(0, 0, 0, 0.2); /* Horizontal offset, vertical offset, blur radius, color */
 }
+
 
 /* Content Styling */
 .service-item-services .content {
+  text-align: left;
   flex: 1;
   padding: 40px;
   display: flex;
@@ -57,18 +86,23 @@
 }
 
 .service-item-services h4 {
+  text-align: left;
+  margin-left: 10px;
   font-size: 2rem; /* Base size for larger screens */
   margin-bottom: 15px;
   color: #333;
 }
 
 .service-item-services p {
+  text-align: left;
   font-size: 1rem; /* Base size for larger screens */
   line-height: 1.6;
   color: #555;
 }
 
 .service-item-services ul {
+  text-align: left;
+  margin-left: 10px;
   list-style: none;
   padding: 0;
   margin: 10px 0;
@@ -80,6 +114,17 @@
   color: #555;
 }
 
+.point-icon {
+  display: inline-block;
+  width: 10px; /* Size of the bullet point */
+  height: 10px; /* Size of the bullet point */
+  background-color: #000; /* Color of the bullet point */
+  border-radius: 50%; /* Makes it a circle */
+  margin-right: 10px; /* Space between bullet and text */
+  vertical-align: middle; /* Aligns the bullet with the text */
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .service-item-services {
@@ -90,8 +135,14 @@
   .service-item-services::before {
     width: 200px;
     height: 200px;
-    top: 10%;
-    left: -50px;
+    top: 90%;
+    right: -80px;
+  }
+  .service-item-services::after {
+    width: 100px;
+    height: 100px;
+    top: 85%;
+    right: -50px;
   }
 
   .service-item-services .image-container-services {
@@ -110,7 +161,7 @@
 
   .service-item-services p,
   .service-item-services li {
-    font-size: 0.9rem; /* Adjust size for tablets */
+    font-size: 1.2rem; /* Adjust size for tablets */
   }
 }
 

@@ -1,21 +1,5 @@
 @extends('header')
 
-<link rel="stylesheet" href="{{ asset('assets/css/signin.css') }}">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('assets/css/events.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/')}}">
-<link rel="stylesheet" href="{{ asset('node_modules/bootstrap-icons/font/bootstrap-icons.css') }}">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/templatemo-scholar.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/owl.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/signin.css') }}">
-  
-
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-
 @section('content')
 <div class="section events" id="events">
     <div class="main-banner-events" id="top">

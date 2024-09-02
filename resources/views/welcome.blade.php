@@ -1,5 +1,4 @@
-
-@extends('master')
+@extends('header')
 
 @section('content')
   <div class="main-banner" id="top">
